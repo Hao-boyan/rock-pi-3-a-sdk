@@ -1,3 +1,5 @@
 /buildroot/*
 /out/
 /prebuilts
+/build.txt
+/.gitignore

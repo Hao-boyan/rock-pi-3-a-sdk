@@ -66,7 +66,7 @@ generate_boot_image() {
 		mkfs.vfat -n "boot" -S 512 -C ${BOOT} $((100 * 1024))
 	else
 		# 500Mb
-		mkfs.vfat -n "boot" -S 512 -C ${BOOT} $((500 * 1024))
+		mkfs.vfat -n "boot" -S 512 -C ${BOOT} $((30 * 1024))
 	fi
 
 	mmd -i ${BOOT} ::/extlinux
