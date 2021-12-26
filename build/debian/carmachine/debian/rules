@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+
+export CFLAGS := $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
+export CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
+export LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+export QT_SELECT := qt5
+export PKG_CONFIG_PATH=/usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig
+
+ifneq (,$(filter arm,$(DEB_HOST_ARCH_CPU)))
+	export QMAKESPEC= $(CURDIR)/linux-armhf-g++
+
+endif
+
+pkgs_with_common = $(patsubst debian/%.install-common,%,$(wildcard debian/*.install-common))
+
+pkgs_with_arch = $(patsubst debian/%.install-$(DEB_HOST_ARCH),%,$(wildcard debian/*.install-$(DEB_HOST_ARCH)))
+
+%:
+	dh $@ --parallel --with pkgkde_symbolshelper
+
+override_dh_auto_configure:
+	echo ${QMAKESPEC}
+	/usr/lib/${DEB_HOST_MULTIARCH}/qt5/bin/qmake

@@ -1,0 +1,3 @@
+rockchip-firmware (1.0) stable; urgency=medium
+  * debian package support
+ -- Jacob Chen <jacob2.chen@rock-chips.com>  Mon, 6 NOV 2017 15:22:59 -0300

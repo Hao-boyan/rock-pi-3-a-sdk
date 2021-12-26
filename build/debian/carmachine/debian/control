@@ -1,0 +1,12 @@
+Source: carmachine
+Priority: optional
+Maintainer: hgc <hero.huang@rock-chips.com>
+Build-Depends: debhelper (>= 9.0.0), autotools-dev
+Standards-Version: 1.1.0
+Section: utils
+Homepage: http://www.rock-chips.com/
+
+Package: carmachine
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The carmachine for Rockchip RK3399 platform.

@@ -1,0 +1,5 @@
+carmachine (1.1.0-20170904) unstable; urgency=medium
+
+  * Carmachine-rk support
+
+ -- hgc <hero.huang@rock-chips.com>  Mon, 4 Sep 2017 15:22:59 -0300

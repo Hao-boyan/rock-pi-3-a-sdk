@@ -1,0 +1,286 @@
+## Introduction
+
+This document describes overlays provided in the kernel packages.
+For generic device tree overlays documentation please see
+https://wiki.radxa.com/Device-tree-overlays
+
+## Platform and Chips:
+
+rockchip (Rockchip)
+- rk3566
+- rk3568
+
+## usage
+
+Kernel provided DT overlay files are in
+  /boot/dtbs/$(uname -r)/rockchip/overlay/
+
+/boot/uEnv.txt contents:
+
+overlays=rk3568-uart0 rk3568-can1-m0 rk3568-pwm13-m0 rk3568-i2c2-m0 rk3568-spi3-m1-cs0-spidev rk3568-w1-gpio
+param_w1_pin=GPIO3_A5
+
+Add names of overlays you want to activate to overlays= line in /boot/uEnv.txt, separated with spaces.
+Add required parameters with their values to /boot/uEnv.txt, one per line.
+Add optional parameters with their values to /boot/uEnv.txt if you want to change the default value, one per line.
+
+### RK3568 Overlay details:
+
+- rk3568-can1-m0 rk3568-can1-m1
+- rk3568-i2c2-m0 rk3568-i2c3-m0
+- rk3568-pwm1-m0 rk3568-pwm1-m1 rk3568-pwm2-m0 rk3568-pwm2-m1 rk3568-pwm8-m0-fan rk3568-pwm9-m0 rk3568-pwm12-m0
+  rk3568-pwm12-m1 rk3568-pwm13-m0 rk3568-pwm13-m1 rk3568-pwm14-m0 rk3568-pwm14-m1 k3568-pwm15-m0 rk3568-pwm15-m1
+- rk3568-spi3-m1-cs0-spidev
+- rk3568-uart0 rk3568-uart3-m0 rk3568-uart3-m1 rk3568-uart5-m1 rk3568-uart7-m1 rk3568-uart8-m1 rk3568-uart9-m1
+- rk3568-w1-gpio
+
+#### rk3568-can1-m0
+
+Activates CAN bus 1 M0
+
+CAN1 M0 pins: CAN1_RX_M0, CAN1_TX_M0
+
+Usage: Add the item "rk3568-can1-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-can1-m0
+
+#### rk3568-can1-m1
+
+Activates CAN bus 1 M1
+
+CAN1 M0 pins: CAN1_RX_M1, CAN1_TX_M1
+
+Usage: Add the item "rk3568-can1-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-can1-m1
+
+#### rk3568-i2c2-m0
+
+Activates I2C bus 2 M0
+
+I2C2 M0 pins: I2C2_SDA_M0, I2C2_SCL_M0
+
+Usage: Add the item "rk3568-i2c2-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-i2c2-m0
+
+#### rk3568-i2c3-m0
+
+Activates I2C bus 3 M0
+
+I2C3 M0 pins: I2C3_SDA_M0, I2C3_SCL_M0
+
+Usage: Add the item "rk3568-i2c3-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-i2c3-m0
+
+#### rk3568-pwm1-m0
+
+Activates PWM1_M0
+
+Usage: Add the item "rk3568-pwm1-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm1-m0
+
+#### rk3568-pwm1-m1
+
+Activates PWM1_M1
+
+Usage: Add the item "rk3568-pwm1-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm1-m1
+
+#### rk3568-pwm2-m0
+
+Activates PWM2_M0
+
+Usage: Add the item "rk3568-pwm2-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm2-m0
+
+#### rk3568-pwm2-m1
+
+Activates PWM2_M1
+
+Usage: Add the item "rk3568-pwm2-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm2-m1
+
+#### rk3568-pwm8-m0-fan
+
+Activates PWM8_M0
+
+Usage: Add the item "rk3568-pwm8-m0-fan" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm8-m0-fan
+
+#### rk3568-pwm9-m0
+
+Activates PWM9_M0
+
+Usage: Add the item "rk3568-pwm9-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm9-m0
+
+#### rk3568-pwm12-m0
+
+Activates PWM12_M0
+
+Usage: Add the item "rk3568-pwm12-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm12-m0
+
+#### rk3568-pwm12-m1
+
+Activates PWM12_M1
+
+Usage: Add the item "rk3568-pwm12-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm12-m1
+
+#### rk3568-pwm13-m0
+
+Activates PWM13_M0
+
+Usage: Add the item "rk3568-pwm13-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm13-m0
+
+#### rk3568-pwm13-m1
+
+Activates PWM13_M1
+
+Usage: Add the item "rk3568-pwm13-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm13-m1
+
+#### rk3568-pwm14-m0
+
+Activates PWM14_M0
+
+Usage: Add the item "rk3568-pwm14-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm14-m0
+
+#### rk3568-pwm14-m1
+
+Activates PWM14_M1
+
+Usage: Add the item "rk3568-pwm14-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm14-m1
+
+#### k3568-pwm15-m0
+
+Activates PWM15_M0
+
+Usage: Add the item "k3568-pwm15-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=k3568-pwm15-m0
+
+#### rk3568-pwm15-m1
+
+Activates PWM15_M1
+
+Usage: Add the item "rk3568-pwm15-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-pwm15-m1
+
+#### rk3568-spi3-m1-cs0-spidev
+
+Activates SPI3 M0 (/dev/spidev3.0)
+
+SPI3 M1 pins: SPI3_CS0_M1,  SPI3_CLK_M1,  SPI3_MOSI_M1,  SPI3_MISO_M1
+
+Usage: Add the item "rk3568-spi3-m1-cs0-spidev" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-spi3-m1-cs0-spidev
+
+#### rk3568-uart0
+
+Activates serial port 0 (/dev/ttyS0)
+
+UART0 pins: UART0_RX, UART0_TX
+
+Usage: Add the item "rk3568-uart0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-uart0
+
+#### rk3568-uart3-m0
+
+Activates serial port 3 on M0 (/dev/ttyS3)
+
+UART3 M0 pins: UART3_RX_M0, UART3_TX_M0
+
+Usage: Add the item "rk3568-uart3-m0" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-uart3-m0
+
+#### rk3568-uart3-m1
+
+Activates serial port 3 on M1 (/dev/ttyS3)
+
+UART3 M1 pins: UART3_RX_M1, UART3_TX_M1
+
+Usage: Add the item "rk3568-uart3-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-uart3-m1
+
+#### rk3568-uart5-m1
+
+Activates serial port 5 on M1 (/dev/ttyS5)
+
+UART5 M1 pins: UART5_RX_M1, UART5_TX_M1
+
+Usage: Add the item "rk3568-uart5-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-uart5-m1
+
+#### rk3568-uart7-m1
+
+Activates serial port 7 on M1 (/dev/ttyS7)
+
+UART7 M1 pins: UART7_RX_M1, UART7_TX_M1
+
+Usage: Add the item "rk3568-uart7-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-uart7-m1
+
+#### rk3568-uart8-m1
+
+Activates serial port 8 on M1 (/dev/ttyS8)
+
+UART8 M1 pins: UART8_RX_M1, UART8_TX_M1
+
+Usage: Add the item "rk3568-uart8-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-uart8-m1
+
+#### rk3568-uart9-m1
+
+Activates serial port 9 on M1 (/dev/ttyS9)
+
+UART9 M1 pins: UART9_RX_M1, UART9_TX_M1
+
+Usage: Add the item "rk3568-uart9-m1" to "overlays=" line in /boot/uEnv.txt.
+
+overlays=rk3568-uart9-m1
+
+#### rk3568-w1-gpio
+
+Activates 1-Wire GPIO master
+
+Requires an external pull-up resistor on the data pin
+
+Parameters:
+
+param_w1_pin (pin)
+	Data pin for 1-Wire master
+	Optional
+	Default: GPIO3_A5
+
+Usage: Add the item "rk3568-w1-gpio" to "overlays=" line in /boot/uEnv.txt.
+Also param_w1_pin is needed.
+
+overlays=rk3568-w1-gpio
+param_w1_pin=GPIO3_A5

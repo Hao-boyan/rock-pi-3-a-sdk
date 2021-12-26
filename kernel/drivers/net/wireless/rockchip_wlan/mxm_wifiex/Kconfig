@@ -1,0 +1,11 @@
+config MXM_WIFIEX
+	bool "Marvell WiFi-Ex Driver"
+	depends on CFG80211 && MMC && PCI && USB
+	select FW_LOADER
+	select WANT_DEV_COREDUMP
+	---help---
+	  This adds support for wireless adapters based on Marvell
+	  8801/8887/8897/8977/8978/8987/8997/9098/9099/9188 chipsets
+	  with SDIO interface, 8897/8997/9097/9098 chipsets with
+	  PCIe interface, 8801/8897/8978/8997/9097/9098 chipset
+	  with USB interface.

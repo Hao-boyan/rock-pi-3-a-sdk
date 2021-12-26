@@ -1,0 +1,21 @@
+Source: rockchip-firmware
+Priority: optional
+Maintainer: Rockchip <opensource@rock-chips.com>
+Build-Depends: debhelper (>= 9.0.0), autotools-dev
+Section: firmware
+Homepage: http://www.rock-chips.com/
+
+Package: kernel-rockchip
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The kernel/dtb for rockchip platform.
+
+Package: u-boot-rockchip
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The boot-loader for rockchip platform.
+
+Package: rootfs-rockchip
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The rootfs for rockchip platform.
