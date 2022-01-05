@@ -17,7 +17,7 @@ finish() {
 trap finish ERR
 
 if [ $# != 1 ]; then
-	BOARD=rk3288-evb
+	BOARD=rk3568-rock-3-a
 fi
 
 [ ! -d ${OUT} ] && mkdir ${OUT}
