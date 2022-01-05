@@ -253,9 +253,9 @@ case ${BOARD} in
 		CHIP="rk3566"
 		;;
 	"rk3568-rock-3-a")
-		DEFCONFIG=rockchip_linux_defconfig
-		UBOOT_DEFCONFIG=rock-3-a-rk3568_config
-		DTB=rk3568-rock-3-a.dtb
+		DEFCONFIG=rk3568_rockpi3a_defconfig
+		UBOOT_DEFCONFIG=rk3568_rockpi3a_defconfig
+		DTB=rk3568-rockpi3a.dtb
 		export ARCH=arm64
 		export CROSS_COMPILE=/usr/local/prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
 		CHIP="rk3568"

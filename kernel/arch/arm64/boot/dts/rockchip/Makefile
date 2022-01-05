@@ -114,5 +114,5 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-nvr-demo-v12-linux-spi-nand.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-radxa-e25.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-rock-3-a.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-rock-3-b.dtb
-
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-rockpi3a.dtb
 # subdir-y	:= $(dts-dirs) overlay
