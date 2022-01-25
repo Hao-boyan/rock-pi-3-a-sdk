@@ -14,4 +14,3 @@
 *~
 *.pyc
 /configs/rockpi3a_gcc_10.3_defconfig
-/configs/rockpi3a_defconfig
