@@ -22,4 +22,4 @@ SDK of ROCK PI 3 A (RK3568)
 
   `./build/mk-image.sh -c rk3568 -t system -r out/rootfs.img`
 
-       _<kbd>rootfs.img</kbd>  copy from `buildroot/output/images`_
+       _<kbd>rootfs.img</kbd>  copy from `buildroot/output/images/rootfs.ext2`_
