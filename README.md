@@ -7,6 +7,8 @@ SDK of ROCK PI 3 A (RK3568)
 > ### SET CROSS_COMPILE
 
   Place toolchain to `./prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu`
+  
+  <https://releases.linaro.org/components/toolchain/binaries/6.3-2017.05/aarch64-linux-gnu/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu.tar.xz>
 
 > ### Build u-boot :
 
